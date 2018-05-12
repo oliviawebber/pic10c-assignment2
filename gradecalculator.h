@@ -3,7 +3,10 @@
 
 #include <QMainWindow>
 #include <vector>
-#include <iostream>
+#include <cstdlib>
+
+//Constants
+
 
 namespace Ui {
 class GradeCalculator;
@@ -21,10 +24,10 @@ private:
     Ui::GradeCalculator *ui;
 
 private slots:
-    void compute_grade_a() const;
+    void compute_grade() const;
 
 signals:
-    void grade_computed(QString);
+    void grade_computed(QString) const;
 };
 
 #endif // GRADECALCULATOR_H
