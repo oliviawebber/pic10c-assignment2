@@ -367,32 +367,6 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>280</y>
-      <width>81</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_6">
-     <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="text">
-        <string>Schema A</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="text">
-        <string>Schema B</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
       <x>470</x>
       <y>290</y>
       <width>111</width>
@@ -409,6 +383,43 @@
      </item>
      <item>
       <widget class="QTextEdit" name="textEdit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>280</y>
+      <width>90</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="text">
+          <string>Schema A</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="text">
+          <string>Schema B</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Calculate Grade</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -794,5 +805,41 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GradeCalculator</receiver>
+   <slot>compute_grade()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GradeCalculator</sender>
+   <signal>grade_computed(QString)</signal>
+   <receiver>textEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>447</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>527</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <signal>grade_computed(QString)</signal>
+  <slot>compute_grade()</slot>
+ </slots>
 </ui>

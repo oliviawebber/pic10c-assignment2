@@ -2,6 +2,8 @@
 #define GRADECALCULATOR_H
 
 #include <QMainWindow>
+#include <vector>
+#include <iostream>
 
 namespace Ui {
 class GradeCalculator;
@@ -17,6 +19,12 @@ public:
 
 private:
     Ui::GradeCalculator *ui;
+
+private slots:
+    void compute_grade_a() const;
+
+signals:
+    void grade_computed(QString);
 };
 
 #endif // GRADECALCULATOR_H

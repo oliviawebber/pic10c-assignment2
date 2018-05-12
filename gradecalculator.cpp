@@ -12,3 +12,9 @@ GradeCalculator::~GradeCalculator()
 {
     delete ui;
 }
+
+void GradeCalculator::compute_grade() const {
+    bool schema_a = ui->radioButton->isChecked();
+    bool schema_b = ui->radioButton_2->isChecked();
+
+}
