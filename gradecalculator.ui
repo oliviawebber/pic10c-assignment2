@@ -14,13 +14,13 @@
    <string>GradeCalculator</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>50</y>
       <width>281</width>
-      <height>411</height>
+      <height>331</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -35,6 +35,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="maximum">
           <number>100</number>
          </property>
@@ -250,13 +253,105 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>330</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Final Grade</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>10</y>
+      <y>330</y>
+      <width>90</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="text">
+          <string>Schema A</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="text">
+          <string>Schema B</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Calculate Grade</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>55</x>
+      <y>14</y>
+      <width>231</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>PIC 10B: Intermediate Programming</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PIC 10C: Advanced Programming</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>36</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Course</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>321</x>
+      <y>51</y>
       <width>301</width>
-      <height>261</height>
+      <height>276</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -355,6 +450,9 @@
        </item>
        <item>
         <widget class="QSpinBox" name="spinBox_18">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="maximum">
           <number>100</number>
          </property>
@@ -362,64 +460,42 @@
        </item>
       </layout>
      </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>290</y>
-      <width>111</width>
-      <height>90</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_7">
      <item>
-      <widget class="QLabel" name="label_12">
-       <property name="text">
-        <string>Final Grade</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>280</y>
-      <width>90</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_8">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
+      <layout class="QVBoxLayout" name="verticalLayout_9">
        <item>
-        <widget class="QRadioButton" name="radioButton">
+        <widget class="QLabel" name="label_13">
          <property name="text">
-          <string>Schema A</string>
+          <string>Final Project</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>Schema B</string>
+        <widget class="QSlider" name="horizontalSlider_19">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_19">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximum">
+          <number>100</number>
          </property>
         </widget>
        </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Calculate Grade</string>
-       </property>
-      </widget>
      </item>
     </layout>
    </widget>
@@ -435,7 +511,7 @@
    </property>
    <widget class="QMenu" name="menuPIC_10C_Grade_Calculator">
     <property name="title">
-     <string>PIC 10C Grade Calculator</string>
+     <string>PIC Grade Calculator</string>
     </property>
    </widget>
    <addaction name="menuPIC_10C_Grade_Calculator"/>
@@ -460,12 +536,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>79</x>
-     <y>69</y>
+     <x>115</x>
+     <y>109</y>
     </hint>
     <hint type="destinationlabel">
-     <x>259</x>
-     <y>62</y>
+     <x>288</x>
+     <y>113</y>
     </hint>
    </hints>
   </connection>
@@ -476,12 +552,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>259</x>
-     <y>71</y>
+     <x>288</x>
+     <y>113</y>
     </hint>
     <hint type="destinationlabel">
-     <x>89</x>
-     <y>71</y>
+     <x>125</x>
+     <y>109</y>
     </hint>
    </hints>
   </connection>
@@ -492,12 +568,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>105</x>
-     <y>122</y>
+     <x>141</x>
+     <y>151</y>
     </hint>
     <hint type="destinationlabel">
-     <x>257</x>
-     <y>122</y>
+     <x>288</x>
+     <y>155</y>
     </hint>
    </hints>
   </connection>
@@ -508,12 +584,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>262</x>
-     <y>116</y>
+     <x>288</x>
+     <y>155</y>
     </hint>
     <hint type="destinationlabel">
-     <x>81</x>
-     <y>121</y>
+     <x>117</x>
+     <y>151</y>
     </hint>
    </hints>
   </connection>
@@ -524,12 +600,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>259</x>
-     <y>170</y>
+     <x>288</x>
+     <y>197</y>
     </hint>
     <hint type="destinationlabel">
-     <x>129</x>
-     <y>170</y>
+     <x>165</x>
+     <y>193</y>
     </hint>
    </hints>
   </connection>
@@ -540,8 +616,8 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>51</x>
-     <y>170</y>
+     <x>87</x>
+     <y>193</y>
     </hint>
     <hint type="destinationlabel">
      <x>259</x>
@@ -556,8 +632,8 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>181</x>
-     <y>216</y>
+     <x>217</x>
+     <y>235</y>
     </hint>
     <hint type="destinationlabel">
      <x>250</x>
@@ -572,12 +648,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>251</x>
-     <y>214</y>
+     <x>288</x>
+     <y>239</y>
     </hint>
     <hint type="destinationlabel">
-     <x>89</x>
-     <y>218</y>
+     <x>125</x>
+     <y>235</y>
     </hint>
    </hints>
   </connection>
@@ -608,8 +684,8 @@
      <y>281</y>
     </hint>
     <hint type="destinationlabel">
-     <x>93</x>
-     <y>281</y>
+     <x>129</x>
+     <y>277</y>
     </hint>
    </hints>
   </connection>
@@ -620,12 +696,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>115</x>
-     <y>325</y>
+     <x>151</x>
+     <y>318</y>
     </hint>
     <hint type="destinationlabel">
-     <x>266</x>
-     <y>325</y>
+     <x>288</x>
+     <y>322</y>
     </hint>
    </hints>
   </connection>
@@ -636,12 +712,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>256</x>
-     <y>332</y>
+     <x>288</x>
+     <y>322</y>
     </hint>
     <hint type="destinationlabel">
-     <x>83</x>
-     <y>325</y>
+     <x>119</x>
+     <y>318</y>
     </hint>
    </hints>
   </connection>
@@ -652,12 +728,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>86</x>
-     <y>375</y>
+     <x>122</x>
+     <y>360</y>
     </hint>
     <hint type="destinationlabel">
-     <x>276</x>
-     <y>382</y>
+     <x>288</x>
+     <y>364</y>
     </hint>
    </hints>
   </connection>
@@ -668,12 +744,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>261</x>
-     <y>371</y>
+     <x>288</x>
+     <y>364</y>
     </hint>
     <hint type="destinationlabel">
-     <x>89</x>
-     <y>376</y>
+     <x>125</x>
+     <y>360</y>
     </hint>
    </hints>
   </connection>
@@ -684,12 +760,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>81</x>
-     <y>426</y>
+     <x>117</x>
+     <y>402</y>
     </hint>
     <hint type="destinationlabel">
-     <x>257</x>
-     <y>430</y>
+     <x>288</x>
+     <y>406</y>
     </hint>
    </hints>
   </connection>
@@ -700,12 +776,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>256</x>
-     <y>439</y>
+     <x>288</x>
+     <y>406</y>
     </hint>
     <hint type="destinationlabel">
-     <x>69</x>
-     <y>423</y>
+     <x>105</x>
+     <y>402</y>
     </hint>
    </hints>
   </connection>
@@ -716,12 +792,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>408</x>
-     <y>88</y>
+     <x>411</x>
+     <y>119</y>
     </hint>
     <hint type="destinationlabel">
-     <x>422</x>
-     <y>115</y>
+     <x>425</x>
+     <y>148</y>
     </hint>
    </hints>
   </connection>
@@ -732,12 +808,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>483</x>
-     <y>116</y>
+     <x>486</x>
+     <y>148</y>
     </hint>
     <hint type="destinationlabel">
-     <x>507</x>
-     <y>92</y>
+     <x>510</x>
+     <y>119</y>
     </hint>
    </hints>
   </connection>
@@ -780,12 +856,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>412</x>
-     <y>290</y>
+     <x>415</x>
+     <y>288</y>
     </hint>
     <hint type="destinationlabel">
-     <x>413</x>
-     <y>266</y>
+     <x>416</x>
+     <y>259</y>
     </hint>
    </hints>
   </connection>
@@ -796,12 +872,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>598</x>
-     <y>270</y>
+     <x>601</x>
+     <y>259</y>
     </hint>
     <hint type="destinationlabel">
-     <x>601</x>
-     <y>293</y>
+     <x>604</x>
+     <y>288</y>
     </hint>
    </hints>
   </connection>
@@ -812,8 +888,8 @@
    <slot>compute_grade()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>371</x>
-     <y>400</y>
+     <x>372</x>
+     <y>443</y>
     </hint>
     <hint type="destinationlabel">
      <x>430</x>
@@ -837,9 +913,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>activated(int)</signal>
+   <receiver>GradeCalculator</receiver>
+   <slot>change_class(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>345</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <signal>grade_computed(QString)</signal>
   <slot>compute_grade()</slot>
+  <slot>change_class(int)</slot>
  </slots>
 </ui>

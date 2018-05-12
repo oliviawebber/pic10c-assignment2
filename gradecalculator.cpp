@@ -71,3 +71,18 @@ void GradeCalculator::compute_grade() const {
         emit grade_computed(QString::number(overall_grade));
     }
 }
+
+void GradeCalculator::change_class(int num) const {
+    switch(num) {
+        case 0:
+        ui->horizontalSlider_11->setEnabled(true);
+        break;
+
+        case 1:
+        ui->horizontalSlider_11->setEnabled(false);
+        break;
+
+        default:
+        break;
+    }
+}

@@ -25,6 +25,7 @@ private:
 
 private slots:
     void compute_grade() const;
+    void change_class(int) const;
 
 signals:
     void grade_computed(QString) const;
