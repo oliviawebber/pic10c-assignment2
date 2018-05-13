@@ -13,23 +13,6 @@ GradeCalculator::~GradeCalculator()
     delete ui;
 }
 
-void GradeCalculator::compute_grade() const {
-    int class_selection = ui->comboBox->currentIndex();
-
-    switch(class_selection) {
-        case 0:
-        compute_grade_pic10b();
-        break;
-
-        case 1:
-        compute_grade_pic10c();
-        break;
-
-        default:
-        break;
-    }
-}
-
 void GradeCalculator::compute_grade_pic10b() const {
     // Get which schema is to be used by checking the radio buttons
     bool schema_a = ui->radioButton->isChecked();
@@ -112,8 +95,25 @@ void GradeCalculator::compute_grade_pic10c() const {
     }
 
     if(schema_b) {
-        overall_grade = (0.15 * hw_overall)+ (0.5 * final) + (0.35 * final_project);
+        overall_grade = (0.15 * hw_overall) + (0.5 * final) + (0.35 * final_project);
         emit grade_computed(QString::number(overall_grade));
+    }
+}
+
+void GradeCalculator::compute_grade() const {
+    int class_selection = ui->comboBox->currentIndex();
+
+    switch(class_selection) {
+        case 0:
+        compute_grade_pic10b();
+        break;
+
+        case 1:
+        compute_grade_pic10c();
+        break;
+
+        default:
+        break;
     }
 }
 
@@ -132,6 +132,8 @@ void GradeCalculator::change_class(int num) const {
         flag = true;
         break;
     }
+
+    // Reset values and enable/disable widgets based on class
     ui->horizontalSlider_11->setEnabled(flag);
     ui->horizontalSlider_11->setValue(0);
     ui->horizontalSlider_12->setEnabled(flag);
