@@ -13,7 +13,7 @@ GradeCalculator::~GradeCalculator()
     delete ui;
 }
 
-void GradeCalculator::compute_grade_b() const {
+void GradeCalculator::compute_grade_pic10b() const {
     // Get which schema is to be used by checking the radio buttons
     bool schema_a = ui->radioButton->isChecked();
     bool schema_b = ui->radioButton_2->isChecked();
@@ -116,12 +116,19 @@ void GradeCalculator::change_class(int num) const {
         break;
     }
     ui->horizontalSlider_11->setEnabled(flag);
+    ui->horizontalSlider_11->setValue(0);
     ui->horizontalSlider_12->setEnabled(flag);
+    ui->horizontalSlider_12->setValue(0);
     ui->horizontalSlider_13->setEnabled(flag);
+    ui->horizontalSlider_13->setValue(0);
     ui->horizontalSlider_14->setEnabled(flag);
+    ui->horizontalSlider_14->setValue(0);
     ui->horizontalSlider_15->setEnabled(flag);
+    ui->horizontalSlider_15->setValue(0);
     ui->horizontalSlider_17->setEnabled(flag);
+    ui->horizontalSlider_17->setValue(0);
     ui->horizontalSlider_19->setEnabled(!flag);
+    ui->horizontalSlider_19->setValue(0);
 
     ui->spinBox_11->setEnabled(flag);
     ui->spinBox_12->setEnabled(flag);
