@@ -87,6 +87,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_10">
        <item>
         <widget class="QLabel" name="label_3">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>HW 3</string>
          </property>
@@ -464,6 +467,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_9">
        <item>
         <widget class="QLabel" name="label_13">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Final Project</string>
          </property>
@@ -477,6 +483,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider_19">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="maximum">
           <number>100</number>
          </property>
@@ -488,7 +497,7 @@
        <item>
         <widget class="QSpinBox" name="spinBox_19">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="maximum">
           <number>100</number>

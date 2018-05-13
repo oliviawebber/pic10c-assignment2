@@ -73,16 +73,40 @@ void GradeCalculator::compute_grade() const {
 }
 
 void GradeCalculator::change_class(int num) const {
+    bool flag;
     switch(num) {
         case 0:
-        ui->horizontalSlider_11->setEnabled(true);
+        flag = true;
         break;
 
         case 1:
-        ui->horizontalSlider_11->setEnabled(false);
+        flag = false;
         break;
 
         default:
+        flag = true;
         break;
     }
+    ui->horizontalSlider_11->setEnabled(flag);
+    ui->horizontalSlider_12->setEnabled(flag);
+    ui->horizontalSlider_13->setEnabled(flag);
+    ui->horizontalSlider_14->setEnabled(flag);
+    ui->horizontalSlider_15->setEnabled(flag);
+    ui->horizontalSlider_17->setEnabled(flag);
+    ui->horizontalSlider_19->setEnabled(!flag);
+
+    ui->spinBox_11->setEnabled(flag);
+    ui->spinBox_12->setEnabled(flag);
+    ui->spinBox_13->setEnabled(flag);
+    ui->spinBox_14->setEnabled(flag);
+    ui->spinBox_15->setEnabled(flag);
+    ui->spinBox_17->setEnabled(flag);
+    ui->spinBox_19->setEnabled(!flag);
+
+    ui->label_4->setEnabled(flag);
+    ui->label_5->setEnabled(flag);
+    ui->label_6->setEnabled(flag);
+    ui->label_7->setEnabled(flag);
+    ui->label_8->setEnabled(flag);
+    ui->label_13->setEnabled(!flag);
 }
