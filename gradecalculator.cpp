@@ -13,6 +13,23 @@ GradeCalculator::~GradeCalculator()
     delete ui;
 }
 
+void GradeCalculator::compute_grade() const {
+    int class_selection = ui->comboBox->currentIndex();
+
+    switch(class_selection) {
+        case 0:
+        compute_grade_pic10b();
+        break;
+
+        case 1:
+        compute_grade_pic10c();
+        break;
+
+        default:
+        break;
+    }
+}
+
 void GradeCalculator::compute_grade_pic10b() const {
     // Get which schema is to be used by checking the radio buttons
     bool schema_a = ui->radioButton->isChecked();

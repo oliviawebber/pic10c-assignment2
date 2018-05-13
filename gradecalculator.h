@@ -22,10 +22,11 @@ public:
 
 private:
     Ui::GradeCalculator *ui;
-
-private slots:
     void compute_grade_pic10b() const;
     void compute_grade_pic10c() const;
+
+private slots:
+    void compute_grade() const;
     void change_class(int) const;
 
 signals:
