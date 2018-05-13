@@ -24,11 +24,14 @@ private:
     Ui::GradeCalculator *ui;
 
 private slots:
-    void compute_grade() const;
+    void compute_grade_pic10b() const;
+    void compute_grade_pic10c() const;
     void change_class(int) const;
 
 signals:
     void grade_computed(QString) const;
 };
+
+double compute_vector_average(const std::vector<int>&);
 
 #endif // GRADECALCULATOR_H

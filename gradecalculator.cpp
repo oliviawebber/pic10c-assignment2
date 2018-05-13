@@ -13,7 +13,7 @@ GradeCalculator::~GradeCalculator()
     delete ui;
 }
 
-void GradeCalculator::compute_grade() const {
+void GradeCalculator::compute_grade_b() const {
     // Get which schema is to be used by checking the radio buttons
     bool schema_a = ui->radioButton->isChecked();
     bool schema_b = ui->radioButton_2->isChecked();
@@ -42,11 +42,7 @@ void GradeCalculator::compute_grade() const {
     }
 
     // Compute the overall hw grade
-    double hw_overall = 0;
-    for(size_t i = 0; i < hw_grades.size(); ++i) {
-        hw_overall += hw_grades[i];
-    }
-    hw_overall /= hw_grades.size();
+    double hw_overall = compute_vector_average(hw_grades);
 
     // Get the test grades
     int midterm_1 = ui->spinBox_16->value();
@@ -68,6 +64,38 @@ void GradeCalculator::compute_grade() const {
         else
             best_midterm = midterm_2;
         overall_grade = (0.25 * hw_overall) + (0.3 * best_midterm) + (.44 * final);
+        emit grade_computed(QString::number(overall_grade));
+    }
+}
+
+void GradeCalculator::compute_grade_pic10c() const {
+    // Get which schema is to be used by checking the radio buttons
+    bool schema_a = ui->radioButton->isChecked();
+    bool schema_b = ui->radioButton_2->isChecked();
+
+    // Pushback all the hw grades
+    std::vector<int> hw_grades;
+    hw_grades.push_back(ui->spinBox->value());
+    hw_grades.push_back(ui->spinBox_9->value());
+    hw_grades.push_back(ui->spinBox_10->value());
+
+    // Compute the overall hw grade
+    double hw_overall = compute_vector_average(hw_grades);
+
+    // Get the test and project grades
+    int midterm_1 = ui->spinBox_16->value();
+    int final = ui->spinBox_18->value();
+    int final_project = ui->spinBox_19->value();
+
+    double overall_grade = 0;
+
+    if(schema_a) {
+        overall_grade = (0.15 * hw_overall) + (0.25 * midterm_1) + (0.3 * final) + (0.35 * final_project);
+        emit grade_computed(QString::number(overall_grade));
+    }
+
+    if(schema_b) {
+        overall_grade = (0.15 * hw_overall)+ (0.5 * final) + (0.35 * final_project);
         emit grade_computed(QString::number(overall_grade));
     }
 }
@@ -109,4 +137,13 @@ void GradeCalculator::change_class(int num) const {
     ui->label_7->setEnabled(flag);
     ui->label_8->setEnabled(flag);
     ui->label_13->setEnabled(!flag);
+}
+
+double compute_vector_average(const std::vector<int>& v) {
+    double average = 0;
+    for(size_t i = 0; i < v.size(); ++i) {
+        average += v[i];
+    }
+    average /= v.size();
+    return average;
 }
